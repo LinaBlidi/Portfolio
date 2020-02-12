@@ -33,18 +33,24 @@
   }
 }
 
-.mouse {
-  height: 60px;
-  width: 39px;
-  padding-top: 30px;
+.svg {
+  margin-top: 30px;
 }
 
 .footer_social {
   display: flex;
   //flex-direction: row;
   font-size: 18px;
-  margin-top: 60px;
-  justify-content: center;
+  //ducoup ici aussi j'ai changer pour faire marcher le transaleY(-10px) pour changer l'espacement entre les reseaux faut juste changer la width et vola j'ai commenter ce qu'il y avait avant si t'aime pas
+  margin-top: 20px;
+  //margin-top: 60px;
+  // justify-content: center;
+  //width : 0vw; avant il y avait pas de width defini c pour ca
+  justify-content: space-between;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+
   font-family: "VT323", monospace;
 
   ul {
@@ -57,10 +63,18 @@
   a {
     text-decoration: none;
     color: $dark;
+    //ducoup lina j'ai add une transition genre la regle des que tu change un etat de quelque chose faut en mettre une tu peux l'enlever si tu kiff ap
+    transition: 0.3s;
+    // ca c que pour fix la hitbox du hover mais je suis pas sur essaye sans et dis moi
+    height: 50px;
 
     &:hover {
       color: $pink;
-      transform: translateY(10px);
+      transform: translateY(-10px);
     }
   }
+}
+
+.click {
+  animation: click 1s infinite;
 }
